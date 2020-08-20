@@ -1,0 +1,1 @@
+Data Source=DESKTOP-CK1I9O7\SQLSERVER2017EXP;Initial Catalog=Cafe_Restaurant;Integrated Security=True

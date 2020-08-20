@@ -1,0 +1,426 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5B331F62-AC1E-46DF-9E9A-AB79E8B5259C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Cafe_Restaurant</RootNamespace>
+    <AssemblyName>Cafe_Restaurant</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <BootstrapperComponentsLocation>Relative</BootstrapperComponentsLocation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>RestaurantCafe icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>DA3D84E182C251867524ECE019086A886D684A87</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Cafe_Restaurant_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebDesign, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1404.0\lib\net40\Microsoft.ReportViewer.WebDesign.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1404.0\lib\net40\Microsoft.ReportViewer.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.SqlServer.Types.14.0.1016.290\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ClassAdisyon.cs" />
+    <Compile Include="ClassGenel.cs" />
+    <Compile Include="ClassMasalar.cs" />
+    <Compile Include="ClassMusteriler.cs" />
+    <Compile Include="ClassOdeme.cs" />
+    <Compile Include="ClassPaketler.cs" />
+    <Compile Include="ClassPersonelGorev.cs" />
+    <Compile Include="ClassPersonelHareketleri.cs" />
+    <Compile Include="ClassPersoneller.cs" />
+    <Compile Include="ClassRezervasyon.cs" />
+    <Compile Include="ClassSiparis.cs" />
+    <Compile Include="ClassUrunCesitleri.cs" />
+    <Compile Include="ClassUrunler.cs" />
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FormAyarlar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAyarlar.Designer.cs">
+      <DependentUpon>FormAyarlar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBill.Designer.cs">
+      <DependentUpon>FormBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormGiris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGiris.Designer.cs">
+      <DependentUpon>FormGiris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormKasaİslemleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormKasaİslemleri.Designer.cs">
+      <DependentUpon>FormKasaİslemleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMasa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMasa.Designer.cs">
+      <DependentUpon>FormMasa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMenu.Designer.cs">
+      <DependentUpon>FormMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMusteriEkleme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMusteriEkleme.Designer.cs">
+      <DependentUpon>FormMusteriEkleme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMusteriAra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMusteriAra.Designer.cs">
+      <DependentUpon>FormMusteriAra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMutfak.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMutfak.Designer.cs">
+      <DependentUpon>FormMutfak.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormRaporlar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRaporlar.Designer.cs">
+      <DependentUpon>FormRaporlar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormRezervasyon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRezervasyon.Designer.cs">
+      <DependentUpon>FormRezervasyon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSiparis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSiparis.Designer.cs">
+      <DependentUpon>FormSiparis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSiparisKontrol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSiparisKontrol.Designer.cs">
+      <DependentUpon>FormSiparisKontrol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="FormAyarlar.resx">
+      <DependentUpon>FormAyarlar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBill.resx">
+      <DependentUpon>FormBill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGiris.resx">
+      <DependentUpon>FormGiris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormKasaİslemleri.resx">
+      <DependentUpon>FormKasaİslemleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMasa.resx">
+      <DependentUpon>FormMasa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMenu.resx">
+      <DependentUpon>FormMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMusteriEkleme.resx">
+      <DependentUpon>FormMusteriEkleme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMusteriAra.resx">
+      <DependentUpon>FormMusteriAra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMutfak.resx">
+      <DependentUpon>FormMutfak.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRaporlar.resx">
+      <DependentUpon>FormRaporlar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRezervasyon.resx">
+      <DependentUpon>FormRezervasyon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSiparis.resx">
+      <DependentUpon>FormSiparis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSiparisKontrol.resx">
+      <DependentUpon>FormSiparisKontrol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="Report2.rdlc" />
+    <EmbeddedResource Include="Report3.rdlc" />
+    <None Include="Cafe_Restaurant_TemporaryKey.pfx" />
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image11.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image12.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Creative Market.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Arteagas-Mexican-Grocery-Store-Background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon.masa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rezervasyon.icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PaketServis.icon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Musteriler.icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Kasa.icon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mutfak.icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Raporlar.icon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\çıkış.icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kilit.icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ayarlar.icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kilit.icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\çıkış.icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rezervasyon.icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image15.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\masa.icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GeriTuşu.icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\çıkış.icon2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dolu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rezerve.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AcikRezerve.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image 19.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image18.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chalkboard-mockup-with-pizza-design_23-2147751943.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image 191.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\italian-food-eda-rasta-pomidory-bazilik.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chalkboard-mockup-with-pizza-design_23-21477519431.jpg" />
+    <None Include="Resources\image3.jpg" />
+    <None Include="Resources\image17.jpg" />
+    <None Include="Resources\image171.jpg" />
+    <None Include="Resources\image14.jpg" />
+    <None Include="Resources\image4.jpg" />
+    <None Include="Resources\image2.jpg" />
+    <None Include="Resources\image16.jpg" />
+    <Content Include="RestaurantCafe icon.ico" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.SqlServer.Express.11.0">
+      <Visible>False</Visible>
+      <ProductName>SQL Server 2012 Express</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

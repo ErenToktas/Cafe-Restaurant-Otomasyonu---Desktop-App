@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet1" targetNamespace="http://tempuri.org/DataSet1.xsd" xmlns:mstns="http://tempuri.org/DataSet1.xsd" xmlns="http://tempuri.org/DataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="Cafe_RestaurantConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="Cafe_RestaurantConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Cafe_Restaurant.Properties.Settings.GlobalReference.Default.Cafe_RestaurantConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTable1TableAdapter" GeneratorDataComponentClassName="DataTable1TableAdapter" Name="DataTable1" UserDataComponentName="DataTable1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Cafe_RestaurantConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT HesapOdemeleri.ARATOPLAM, HesapOdemeleri.KDVTUTARİ, HesapOdemeleri.İNDİRİM, HesapOdemeleri.TOPLAMTUTAR, HesapOdemeleri.TARİH, Urunler.URUNADİ, Satislar.URUNID
+FROM     HesapOdemeleri INNER JOIN
+                  Satislar ON HesapOdemeleri.ADİSYONID = Satislar.ADİSYONID INNER JOIN
+                  Urunler ON Satislar.URUNID = Urunler.ID INNER JOIN
+                  Adisyon ON HesapOdemeleri.ADİSYONID = Adisyon.ID AND Satislar.ADİSYONID = Adisyon.ID
+WHERE  (31 &gt;= DATEDIFF(dd, HesapOdemeleri.TARİH, GETDATE()))</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ARATOPLAM" DataSetColumn="ARATOPLAM" />
+              <Mapping SourceColumn="KDVTUTARİ" DataSetColumn="KDVTUTARİ" />
+              <Mapping SourceColumn="İNDİRİM" DataSetColumn="İNDİRİM" />
+              <Mapping SourceColumn="TOPLAMTUTAR" DataSetColumn="TOPLAMTUTAR" />
+              <Mapping SourceColumn="TARİH" DataSetColumn="TARİH" />
+              <Mapping SourceColumn="URUNADİ" DataSetColumn="URUNADİ" />
+              <Mapping SourceColumn="URUNID" DataSetColumn="URUNID" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTable2TableAdapter" GeneratorDataComponentClassName="DataTable2TableAdapter" Name="DataTable2" UserDataComponentName="DataTable2TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Cafe_RestaurantConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT HesapOdemeleri.ARATOPLAM, HesapOdemeleri.KDVTUTARİ, HesapOdemeleri.İNDİRİM, HesapOdemeleri.TOPLAMTUTAR, HesapOdemeleri.TARİH, Urunler.URUNADİ, Satislar.URUNID
+FROM     HesapOdemeleri INNER JOIN
+                  Satislar ON HesapOdemeleri.ADİSYONID = Satislar.ADİSYONID INNER JOIN
+                  Urunler ON Satislar.URUNID = Urunler.ID INNER JOIN
+                  Adisyon ON HesapOdemeleri.ADİSYONID = Adisyon.ID AND Satislar.ADİSYONID = Adisyon.ID
+WHERE  (1 &gt;= DATEDIFF(dd, HesapOdemeleri.TARİH, GETDATE()))</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ARATOPLAM" DataSetColumn="ARATOPLAM" />
+              <Mapping SourceColumn="KDVTUTARİ" DataSetColumn="KDVTUTARİ" />
+              <Mapping SourceColumn="İNDİRİM" DataSetColumn="İNDİRİM" />
+              <Mapping SourceColumn="TOPLAMTUTAR" DataSetColumn="TOPLAMTUTAR" />
+              <Mapping SourceColumn="TARİH" DataSetColumn="TARİH" />
+              <Mapping SourceColumn="URUNADİ" DataSetColumn="URUNADİ" />
+              <Mapping SourceColumn="URUNID" DataSetColumn="URUNID" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet1" msprop:Generator_UserDSName="DataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_RowClassName="DataTable1Row" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ARATOPLAM" msprop:Generator_ColumnVarNameInTable="columnARATOPLAM" msprop:Generator_ColumnPropNameInRow="ARATOPLAM" msprop:Generator_ColumnPropNameInTable="ARATOPLAMColumn" msprop:Generator_UserColumnName="ARATOPLAM" type="xs:decimal" minOccurs="0" />
+              <xs:element name="KDVTUTARİ" msprop:Generator_ColumnVarNameInTable="columnKDVTUTARİ" msprop:Generator_ColumnPropNameInRow="KDVTUTARİ" msprop:Generator_ColumnPropNameInTable="KDVTUTARİColumn" msprop:Generator_UserColumnName="KDVTUTARİ" type="xs:decimal" minOccurs="0" />
+              <xs:element name="İNDİRİM" msprop:Generator_ColumnVarNameInTable="columnİNDİRİM" msprop:Generator_ColumnPropNameInRow="İNDİRİM" msprop:Generator_ColumnPropNameInTable="İNDİRİMColumn" msprop:Generator_UserColumnName="İNDİRİM" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TOPLAMTUTAR" msprop:Generator_ColumnVarNameInTable="columnTOPLAMTUTAR" msprop:Generator_ColumnPropNameInRow="TOPLAMTUTAR" msprop:Generator_ColumnPropNameInTable="TOPLAMTUTARColumn" msprop:Generator_UserColumnName="TOPLAMTUTAR" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TARİH" msprop:Generator_ColumnVarNameInTable="columnTARİH" msprop:Generator_ColumnPropNameInRow="TARİH" msprop:Generator_ColumnPropNameInTable="TARİHColumn" msprop:Generator_UserColumnName="TARİH" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="URUNADİ" msprop:Generator_ColumnVarNameInTable="columnURUNADİ" msprop:Generator_ColumnPropNameInRow="URUNADİ" msprop:Generator_ColumnPropNameInTable="URUNADİColumn" msprop:Generator_UserColumnName="URUNADİ" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="URUNID" msprop:Generator_ColumnVarNameInTable="columnURUNID" msprop:Generator_ColumnPropNameInRow="URUNID" msprop:Generator_ColumnPropNameInTable="URUNIDColumn" msprop:Generator_UserColumnName="URUNID" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DataTable2" msprop:Generator_TableClassName="DataTable2DataTable" msprop:Generator_TableVarName="tableDataTable2" msprop:Generator_TablePropName="DataTable2" msprop:Generator_RowDeletingName="DataTable2RowDeleting" msprop:Generator_RowChangingName="DataTable2RowChanging" msprop:Generator_RowEvHandlerName="DataTable2RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable2RowDeleted" msprop:Generator_UserTableName="DataTable2" msprop:Generator_RowChangedName="DataTable2RowChanged" msprop:Generator_RowEvArgName="DataTable2RowChangeEvent" msprop:Generator_RowClassName="DataTable2Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ARATOPLAM" msprop:Generator_ColumnVarNameInTable="columnARATOPLAM" msprop:Generator_ColumnPropNameInRow="ARATOPLAM" msprop:Generator_ColumnPropNameInTable="ARATOPLAMColumn" msprop:Generator_UserColumnName="ARATOPLAM" type="xs:decimal" minOccurs="0" />
+              <xs:element name="KDVTUTARİ" msprop:Generator_ColumnVarNameInTable="columnKDVTUTARİ" msprop:Generator_ColumnPropNameInRow="KDVTUTARİ" msprop:Generator_ColumnPropNameInTable="KDVTUTARİColumn" msprop:Generator_UserColumnName="KDVTUTARİ" type="xs:decimal" minOccurs="0" />
+              <xs:element name="İNDİRİM" msprop:Generator_ColumnVarNameInTable="columnİNDİRİM" msprop:Generator_ColumnPropNameInRow="İNDİRİM" msprop:Generator_ColumnPropNameInTable="İNDİRİMColumn" msprop:Generator_UserColumnName="İNDİRİM" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TOPLAMTUTAR" msprop:Generator_ColumnVarNameInTable="columnTOPLAMTUTAR" msprop:Generator_ColumnPropNameInRow="TOPLAMTUTAR" msprop:Generator_ColumnPropNameInTable="TOPLAMTUTARColumn" msprop:Generator_UserColumnName="TOPLAMTUTAR" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TARİH" msprop:Generator_ColumnVarNameInTable="columnTARİH" msprop:Generator_ColumnPropNameInRow="TARİH" msprop:Generator_ColumnPropNameInTable="TARİHColumn" msprop:Generator_UserColumnName="TARİH" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="URUNADİ" msprop:Generator_ColumnVarNameInTable="columnURUNADİ" msprop:Generator_ColumnPropNameInRow="URUNADİ" msprop:Generator_ColumnPropNameInTable="URUNADİColumn" msprop:Generator_UserColumnName="URUNADİ" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="URUNID" msprop:Generator_ColumnVarNameInTable="columnURUNID" msprop:Generator_ColumnPropNameInRow="URUNID" msprop:Generator_ColumnPropNameInTable="URUNIDColumn" msprop:Generator_UserColumnName="URUNID" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

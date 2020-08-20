@@ -1,0 +1,11 @@
+1. Baglanti metin belgesini C:\ dizinine kopyalayınız. 
+
+2. Data Source=DESKTOP-CK1I9O7\SQLSERVER2017EXP;Initial Catalog=Cafe_Restaurant;Integrated Security=True adresindeki
+ "DESKTOP-CK1I9O7"olan bilgisayar isminin yerine setup yüklenecek olan bilgisayarın adını yazınız.
+
+3. Veritabanı MSSQL içindeki dosyaları kopyalayın C:\Program Files\Microsoft SQL Server\MSSQL14.SQLSERVER2017EXP\MSSQL\DATA içerisine yapıştırın
+
+4. MS SQL Management Studio açarak Database klasörüne sağ tıklayıp attach seçeneğini tıklayıp açılan data sayfasında kopyaladığınız 
+ dosyaları seçip OK basıp veritabanı tanımlama işlemini bitirebilirsiniz.
+
+5. Cafe&Restaurant Proje C#\Cafe Restaurant\Debug içerisinden setup dosyasını çalıştırarak programı yükleyebilirsiniz...
